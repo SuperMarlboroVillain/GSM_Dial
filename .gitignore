@@ -1,0 +1,26 @@
+# Keil MDK build artifacts
+Output/
+*.o
+*.crf
+*.d
+*.dep
+*.lnp
+*.bak
+*.htm
+*.map
+*.axf
+*.hex
+*.log
+# note: *.lib is NOT ignored - Middlewares/emWin/Lib/*.lib are required
+
+# Keil per-user files (window layouts, debugger options)
+*.uvguix.*
+*.uvoptx
+DebugConfig/
+JLinkLog.txt
+*.ini
+
+# OS junk
+Thumbs.db
+.DS_Store
+Desktop.ini
