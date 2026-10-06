@@ -30,7 +30,7 @@ GSM_Dial 是一套运行在正点原子"探索者"STM32F407 开发板上的 GSM 
 | --- | --- |
 | 主控 | STM32F407ZGT6（Cortex-M4F，168 MHz，1 MB Flash / 192 KB SRAM + 64 KB CCM） |
 | 开发板 | 正点原子探索者 F407 |
-| GSM 模块 | SIM800C / SIM900 系列（兼容 SIM7600 启动 URC），USART1 115200 8N1 无流控 |
+| GSM 模块 | SIM7600X |
 | 显示屏 | 480×800 竖屏 RGB LCD，电容触摸（GT9xxx / FT5206 自适应） |
 | 操作系统 | uC/OS-III（1000 Hz 节拍，时间片轮转调度） |
 | GUI | SEGGER emWin |
@@ -44,12 +44,12 @@ GSM_Dial 是一套运行在正点原子"探索者"STM32F407 开发板上的 GSM 
 
 ```
 ┌────────────────────────────────────────────────────┐
-│  应用层  gsm_ui.c          （emWin 四页界面 + 弹窗）  │
+│  应用层  gsm_ui.c          （emWin 四页界面 + 弹窗） │
 ├────────────────────────────────────────────────────┤
 │  服务层  gsm.c             （GSM AT 引擎/短信/远程控制）│
 ├────────────────────────────────────────────────────┤
-│  RTOS    uC/OS-III         任务调度、临界区保护        │
-│  GUI     emWin             窗口/控件/皮肤             │
+│  RTOS    uC/OS-III         任务调度、临界区保护      │
+│  GUI     emWin             窗口/控件/皮肤           │
 ├────────────────────────────────────────────────────┤
 │  BSP     LED/BEEP/LCD/TOUCH/SRAM/KEY/TIMER/24CXX/IIC │
 │  SYSTEM  delay / sys / usart（环形缓冲行接收）        │
